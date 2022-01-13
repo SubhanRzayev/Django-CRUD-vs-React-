@@ -1,4 +1,3 @@
-from typing import Generic
 from django.http.response import Http404
 from django.views import generic
 from rest_framework import serializers
@@ -23,7 +22,7 @@ class ApiOverView(APIView):
         return Response(api_urls)
 
 
-class TaskListApiView(generics.ListAPIView):
+class TaskListApiView(APIView):
     """
     List all tasks, or create an new task
     """
